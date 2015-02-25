@@ -3,6 +3,14 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical" >
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -15,7 +23,7 @@
             android:id="@+id/score_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world"
+            android:text="0"
             android:textSize="40dp"/>
         </LinearLayout>
     <TextView
@@ -49,15 +57,34 @@
     <Space
         android:layout_width="100dp"
         android:layout_height="50dp" />
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score:"
+                android:textSize="40dp"/>
+            <TextView
+                android:id="@+id/score_view_subjective"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="40dp"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_gravity="center_horizontal" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,5 +114,7 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+
+</LinearLayout>
+</ScrollView>
 </LinearLayout>
