@@ -82,12 +82,10 @@ public class QuizActivity extends Activity {
 
     public void Subjective_Check(String user_answer){
 
-        int correctAnswer = sQuestionBank[s_count].getAnswer();
-        Log.d(TAG, String.valueOf(correctAnswer));
-        String aString = Integer.toString(correctAnswer);
+        String correctAnswer = getString(sQuestionBank[s_count].getAnswer());
+        //Log.d(TAG,correctAnswer);
         int messageResId=0;
-        int converted=Integer.parseInt(user_answer);
-        if(converted==correctAnswer){
+        if(correctAnswer.equals(user_answer)){
             messageResId=R.string.correct_toast;
         }
         else
