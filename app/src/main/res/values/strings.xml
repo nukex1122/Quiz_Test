@@ -19,6 +19,15 @@
     <string name="question_africa">The source of the Nile River is in Egypt.</string>
     <string name="question_americas">The Amazon River is the longest river in the Americas.</string>
     <string name="question_asia">Lake Baikal is the world\'s oldest and deepest freshwater lake.</string>
+    <string name="question_tf_1">Electrons are larger than molecules.</string>
+    <string name="question_tf_2">The chemical make up food often changes when you cook it.</string>
+    <string name="question_tf_3">Atoms are most stable when their outer shells are full.</string>
+    <string name="question_tf_4">Atomic bombs work by atomic fission.</string>
+    <string name="question_tf_5">Basketball is the only major sport completely American in origin.</string>
+    <string name="question_tf_6">Skin is the human body\'s largest organ.</string>
+    <string name="question_tf_7">"Magma" is the scientific name for lava.</string>
+    <string name="question_tf_8">The classic sci-fi novel Fahrenheit 451 gets its title from the temperature used to burn paper.</string>
+    <string name="question_tf_9">In Portugal you can be fined if caught driving whilst wearing flip-flops or not wearing a shirt.</string>
     
     <string name="question_tech_1">TFT is a technology used in what type of component?</string>
         <string name="q_t_1_ans">Monitor</string>

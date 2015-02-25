@@ -26,6 +26,16 @@ public class QuizActivity extends Activity {
             new controller(R.string.question_africa,false),
             new controller(R.string.question_americas,true),
             new controller(R.string.question_asia,true),
+            new controller(R.string.question_tf_1,false),
+            new controller(R.string.question_tf_2,true),
+            new controller(R.string.question_tf_3,true),
+            new controller(R.string.question_tf_4,true),
+            new controller(R.string.question_tf_5,true),
+            new controller(R.string.question_tf_6,true),
+            new controller(R.string.question_tf_7,false),
+            new controller(R.string.question_tf_8,true),
+            new controller(R.string.question_tf_9,true),
+
     };
     //Subjective Things Start Here, s means Subjective
     private SubjectiveController sQuestionBank[]=new SubjectiveController[]{
@@ -93,6 +103,7 @@ public class QuizActivity extends Activity {
             if(sQuestionBank[s_count].getSeen()==false){
                 sQuestionBank[s_count].setSeen(true);
                 sScore++;
+                messageResId=R.string.already_done_toast;
             }
         }
         else
