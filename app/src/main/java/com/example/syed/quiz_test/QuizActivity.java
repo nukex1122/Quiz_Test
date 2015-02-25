@@ -40,7 +40,10 @@ public class QuizActivity extends Activity {
     private Button mCheckButton;
     private int s_count=0;
     private Button mSNext;
-    private String text;
+    private int sScore=0;
+    private TextView SubjectiveScore;
+
+
     public void setScore(){
         mScore.setText(String.valueOf(score));
     }
@@ -87,6 +90,10 @@ public class QuizActivity extends Activity {
         int messageResId=0;
         if(correctAnswer.equals(user_answer)){
             messageResId=R.string.correct_toast;
+            if(sQuestionBank[s_count].getSeen()==false){
+                sQuestionBank[s_count].setSeen(true);
+                sScore++;
+            }
         }
         else
         {
@@ -95,6 +102,10 @@ public class QuizActivity extends Activity {
         }
         Toast.makeText(QuizActivity.this,messageResId,Toast.LENGTH_SHORT).show();
 
+    }
+
+    public void setSubjectiveScore(){
+        SubjectiveScore.setText(String.valueOf(sScore));
     }
 
     @Override
@@ -113,7 +124,7 @@ public class QuizActivity extends Activity {
         mSubjectiveQuestionBox=(TextView)findViewById(R.id.subjective_questions);
         mCheckButton=(Button) findViewById(R.id.check_button);
         mSNext=(Button) findViewById(R.id.s_Next_Button);
-
+        SubjectiveScore=(TextView) findViewById(R.id.score_view_subjective);
 
         updateQuestion();
         updateSubjectiveQuestion();
@@ -122,7 +133,9 @@ public class QuizActivity extends Activity {
         for(int i=0;i<mQuestionBank.length;i++){
             mQuestionBank[i].setSeen(false);
         }
-
+        for(int i=0;i<sQuestionBank.length;i++){
+            sQuestionBank[i].setSeen(false);
+        }
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,6 +174,7 @@ public class QuizActivity extends Activity {
             public void onClick(View v) {
                 String UserAnswer = mAnswerBox.getText().toString();
                 Subjective_Check(UserAnswer);
+                setSubjectiveScore();
             }
         });
     }

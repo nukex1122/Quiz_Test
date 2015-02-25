@@ -6,6 +6,7 @@ package com.example.syed.quiz_test;
 public class SubjectiveController {
     private int mQuestion;
     private int mAnswer;
+    private boolean mSeen;
 
     public SubjectiveController(int question,int answer){
         mQuestion=question;
@@ -19,5 +20,11 @@ public class SubjectiveController {
     public int getAnswer()
     {
         return mAnswer;
+    }
+    public void setSeen(boolean a){
+        mSeen=a;
+    }
+    public boolean getSeen(){
+        return mSeen;
     }
 }
