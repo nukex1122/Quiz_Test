@@ -42,6 +42,12 @@
                 android:layout_height="wrap_content"
                 android:text="Score:"
                 android:textSize="40dp"/>
+            <TextView
+                android:id="@+id/score_view"
+                android:layout_width="wrap_content"
+                android:text="0"
+                android:textSize="40dp"
+                android:layout_height="wrap_content" />
 
             </LinearLayout>
 
